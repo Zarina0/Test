@@ -35,13 +35,6 @@ public class Math {
         return String.valueOf(num1 * num2);
     }
 
-    public String dividedByZero(String a, String b) {
-        int num1 = Integer.parseInt(a.trim());
-        int num2 = Integer.parseInt(b.trim());
-        if (num1 < 0 || num2 < 0) {
-            return "this number cannot be divisible by zero";
-        }
-    }
 
     public String areSymbolsIncluded(String a, String b) {
         Pattern p = Pattern.compile("[^a-s3-9 ]", Pattern.CASE_INSENSITIVE);
