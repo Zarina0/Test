@@ -20,13 +20,12 @@ public class MainActivityTest {
     @Rule
     public ActivityScenarioRule rule = new ActivityScenarioRule<>(MainActivity.class);
 
-
     @Test
     public void addTest() {
-        onView(withId(R.id.et_first)).perform().check(matches((withText(isEmptyString()))));
-        onView(withId(R.id.et_first)).perform(typeText("10"));
-        onView(withId(R.id.et_second)).perform().check(matches((withText(isEmptyString()))));
-        onView(withId(R.id.et_second)).perform(typeText("44"));
+        onView(withId(R.id.ed_first)).perform().check(matches((withText(isEmptyString()))));
+        onView(withId(R.id.ed_first)).perform(typeText("10"));
+        onView(withId(R.id.ed_second)).perform().check(matches((withText(isEmptyString()))));
+        onView(withId(R.id.ed_second)).perform(typeText("44"));
         onView(withId(R.id.btn_calculation)).perform(click());
         onView(withId(R.id.tv_result)).check(matches(withText("54")));
     }

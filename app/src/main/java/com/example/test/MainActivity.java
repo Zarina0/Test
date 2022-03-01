@@ -1,10 +1,7 @@
 package com.example.test;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.test.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,20 +13,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initListeners();
-
     }
 
     private void initListeners() {
-        binding.btnCalculation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Math math = new Math();
-                String num1 = binding.etFirst.getText().toString();
-                String num2 = binding.etSecond.getText().toString();
-                String result = math.add(num1, num2);
-                binding.tvResult.setText(result);
-
-            }
+       Math math = new Math();
+        binding.btnCalculation.setOnClickListener(view -> {
+            String num1 = binding.edFirst.getText().toString();
+            String num2 = binding.edSecond.getText().toString();
+            String result = math.add(num1, num2);
+            binding.tvResult.setText(result);
         });
-
     }}
