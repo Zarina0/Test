@@ -23,6 +23,10 @@ public class Math {
         int num1 = Integer.parseInt(a.trim());
         int num2 = Integer.parseInt(b.trim());
         return String.valueOf(num1 / num2);
+        if (num1 < 0 || num2 < 0) {
+            return "Error,you can't divide by zero";
+        }
+        return String.valueOf(num1/num2);
     }
 
     public String multiply(String a, String b) {
@@ -37,7 +41,6 @@ public class Math {
         if (num1 < 0 || num2 < 0) {
             return "this number cannot be divisible by zero";
         }
-        return "Error,you can't divide by zero";
     }
 
     public String areSymbolsIncluded(String a, String b) {

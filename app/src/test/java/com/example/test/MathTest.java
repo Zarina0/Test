@@ -22,6 +22,7 @@ public class MathTest {
     @Test
     public void divideTest() {
         assertEquals("2", math.divide("10", "5"));
+        assertEquals("Error,you can't divide by zero", math.dividedByZero("5", "0"));
     }
 
     @Test
@@ -46,10 +47,6 @@ public class MathTest {
 
     }
 
-    @Test
-    public void isDividedByZero() {
-        assertEquals("Error,you can't divide by zero", math.dividedByZero("5", "0"));
-    }
 
     @Test
     public void characterTest() {
